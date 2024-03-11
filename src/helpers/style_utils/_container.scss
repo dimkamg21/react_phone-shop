@@ -1,0 +1,16 @@
+@import "../utils";
+
+.container {
+  overflow-x: hidden;
+
+  margin: 0 24px;
+
+  @include on-mobile {
+    margin: 0 16px;
+  }
+
+  @media (min-width: $container-width) {
+    width: $container-width;
+    margin: 0 auto;
+  }
+}

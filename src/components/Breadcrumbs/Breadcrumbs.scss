@@ -1,0 +1,40 @@
+@import "../../helpers/utils";
+
+.breadcrumbs {
+  & a {
+    text-decoration: none;
+  }
+
+  &__list {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  &__link {
+    height: 16px;
+    color: $gray-secondary;
+
+    &:hover {
+      color: $gray-primary;
+    }
+
+    @extend %small-text;
+  }
+
+  &__item {
+    display: flex;
+    gap: 8px;
+
+    &:last-child > .breadcrumbs__link {
+      color: $gray-primary;
+
+    }
+  }
+
+  &__arrow {
+    & path {
+      fill: $gray-elements;
+    }
+  }
+}

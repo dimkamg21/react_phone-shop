@@ -1,9 +1,12 @@
-import { createRoot } from 'react-dom/client';
+/* eslint-disable react/no-deprecated */
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { Root } from './Root';
+import store from './store/store';
 
-import 'bulma/css/bulma.css';
-import '@fortawesome/fontawesome-free/css/all.css';
-import './index.scss';
-
-import { App } from './App';
-
-createRoot(document.getElementById('root') as HTMLDivElement).render(<App />);
+ReactDOM.render(
+  <Provider store={store}>
+    <Root />
+  </Provider>,
+  document.getElementById('root'),
+);
